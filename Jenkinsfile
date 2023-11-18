@@ -22,7 +22,7 @@ pipeline {
         script {
             withCredentials([usernamePassword(credentialsId: 'aws', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
                 sh "pip install --upgrade requests==2.20.1"
-                ansiblePlaybook playbook: 'ansible-playbook.yaml', credentialsId: 'aws'
+                sh "ansible-playbook ansible-playbook.yaml"
             }
         }
     }
