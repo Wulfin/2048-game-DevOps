@@ -22,9 +22,9 @@
 
   vars:
     ansible_python_interpreter: /usr/bin/python3.10
-    keypair: SSH-Key1.pem                                     # Set key pair
+    keypair: SSH-Key1                                   # Set key pair
     instance_type: t2.micro
-    image_id: ami-0f5ee92e2d63afc18
+    image_id: ami-00983e8a26e4c9bd9
     wait: yes
     group: webserver
     count: 1
