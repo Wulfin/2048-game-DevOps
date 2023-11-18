@@ -18,12 +18,14 @@ pipeline {
             steps {
                 sh "trivy fs . > trivyfs.txt"
             }
-        }    
-        script {
+        }
+        stage ("provisioning") {
+            script {
             withCredentials([usernamePassword(credentialsId: 'aws', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
                 sh "pip install --upgrade requests==2.20.1"
                 sh "ansible-playbook ansible-playbook.yaml"
             }
         }
+        }    
     }
 }
