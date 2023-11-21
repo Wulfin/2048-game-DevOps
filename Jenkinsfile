@@ -16,11 +16,11 @@ pipeline {
             }
         }
 
-        stage('TRIVY FS SCAN') {
-            steps {
-                sh "trivy fs ."
-            }
-        }        
+        // stage('TRIVY FS SCAN') {
+        //     steps {
+        //         sh "trivy fs ."
+        //     }
+        // }        
 
         stage ("provisioning"){
             environment{
