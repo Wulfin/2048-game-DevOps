@@ -42,13 +42,13 @@ pipeline {
             }
         }
 
-        stage ("configuring"){
-            // steps {
-            //     script {
+        // stage ("configuring"){
+        //     steps {
+        //         script {
                 
 
-            //     }
-            // }
-        }    
+        //         }
+        //     }
+        // }    
     }
 }
