@@ -44,10 +44,7 @@ pipeline {
 
         stage ("configuring"){
             steps {
-                script {
                 
-
-                }
             }
         }    
     }
