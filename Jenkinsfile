@@ -12,7 +12,7 @@ pipeline {
 
         stage('checkout'){
             steps{
-                git branch: 'main', url: 'https://github.com/Wulfin/2048-game-DevOps.git'
+                git branch: 'feature/remote-deployement-terraform-ansible', url: 'https://github.com/Wulfin/2048-game-DevOps.git'
             }
         }
 
