@@ -42,7 +42,7 @@ pipeline {
             }
         }
 
-        stage ("configuring"){ {
+        stage ("configuring"){
             steps {
                 script {
                 
