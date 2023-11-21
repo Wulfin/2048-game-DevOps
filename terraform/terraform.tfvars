@@ -1,0 +1,8 @@
+vpc_cidr_blocks = "10.0.0.0/16"
+subnet_cidr_blocks = "10.0.10.0/24"
+avail_zone = "eu-west-3a"
+env_prefix = "jenkins"
+my_ip = "105.71.17.137/32"
+instance_type = "t2.micro"
+private_key_location = "/home/saif/.ssh/SSH-Key1.pem"
+my_sg = "SG1"
