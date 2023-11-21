@@ -25,11 +25,11 @@ pipeline {
         stage ("provisioning"){
             environment{
                 AWS_ACCESS_KEY_ID = ''
-                AWS_ACCESS_KEY_SECRET = ''
+                AWS_SECRET_ACCESS_KEY = ''
             }
             steps{
                 script{
-                    withCredentials([usernamePassword(credentialsId: 'aws', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_ACCESS_KEY_SECRET')]){
+                    withCredentials([usernamePassword(credentialsId: 'aws', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]){
                         dir("terraform"){
                             env.AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID
                             env.AWS_SECRET_ACCESS_KEY = AWS_SECRET_ACCESS_KEY
